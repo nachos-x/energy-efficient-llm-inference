@@ -1,2 +1,2 @@
 # Energy-Efficient LLM Inference Pipeline
-A production-ready pipeline for quantized, adversarially robust LLMs, reducing inference time by 40% and energy use by 30% for enterprise applications.
+"Energy-efficient DistilBERT inference pipeline: 8-bit quantization for 74% faster inference & 65% energy reduction. Includes adversarial training, FastAPI + Docker."
