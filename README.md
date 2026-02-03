@@ -25,6 +25,36 @@ Tech Stack
 - Docker
 - MLflow & CodeCarbon (metrics & emissions tracking)
 
+Quick Start
+
+1. Install dependencies
+```
+pip install -r requirements.txt
+```
+
+2. Train the model (baseline + optional adversarial fine-tuning)
+```
+python src/train.py
+```
+
+3. Benchmark latency & energy
+```
+python src/inference_eval.py
+```
+
+4. Run the production API
+```
+uvicorn src.app:app --host 0.0.0.0 --port 8000
+```
+
+Test with curl:
+```
+curl -X POST "http://localhost:8000/predict" \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: test123" \
+  -d '{"text": "This movie is a masterpiece!"}'
+```
+
 
 
 
